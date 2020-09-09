@@ -1,9 +1,7 @@
 //
-//  ImagePicker.swift
-//  Turnout Tracker
+//  To be implemented at a later date
 //
-//  Created by Stephen Boussarov on 7/23/20.
-//  Copyright © 2020 Stephen Boussarov. All rights reserved.
+//  Created by: Hacking with Swift
 //
 
 import SwiftUI

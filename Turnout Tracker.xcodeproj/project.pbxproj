@@ -29,6 +29,9 @@
 		DC279F6E24B916B000B0A7A9 /* NavBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC279F6D24B916B000B0A7A9 /* NavBarModifier.swift */; };
 		DC279F7524B9774600B0A7A9 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC279F7424B9774600B0A7A9 /* EventListView.swift */; };
 		DC279F7724B9786900B0A7A9 /* PastEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC279F7624B9786900B0A7A9 /* PastEventListView.swift */; };
+		DCA0D5482508576E0041F91A /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA0D5472508576E0041F91A /* ViewRouter.swift */; };
+		DCA0D54B250858160041F91A /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA0D54A250858160041F91A /* GroupsView.swift */; };
+		DCA0D54D2508582D0041F91A /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA0D54C2508582D0041F91A /* TabsView.swift */; };
 		DCD7125424BEE3FB00A3979F /* pubFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7125324BEE3FB00A3979F /* pubFunctions.swift */; };
 		DCD7125624BEE4B700A3979F /* NewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7125524BEE4B700A3979F /* NewListView.swift */; };
 		DCD7125A24BFA62700A3979F /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7125924BFA62700A3979F /* HomeTabView.swift */; };
@@ -74,6 +77,9 @@
 		DC279F6D24B916B000B0A7A9 /* NavBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarModifier.swift; sourceTree = "<group>"; };
 		DC279F7424B9774600B0A7A9 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		DC279F7624B9786900B0A7A9 /* PastEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEventListView.swift; sourceTree = "<group>"; };
+		DCA0D5472508576E0041F91A /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		DCA0D54A250858160041F91A /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		DCA0D54C2508582D0041F91A /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		DCD7125324BEE3FB00A3979F /* pubFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pubFunctions.swift; sourceTree = "<group>"; };
 		DCD7125524BEE4B700A3979F /* NewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListView.swift; sourceTree = "<group>"; };
 		DCD7125924BFA62700A3979F /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
@@ -126,11 +132,11 @@
 			children = (
 				DC279F2C249D7D6400B0A7A9 /* AppDelegate.swift */,
 				DC279F2E249D7D6400B0A7A9 /* SceneDelegate.swift */,
-				DC279F33249D7D6400B0A7A9 /* ContentView.swift */,
+				DCA0D549250857F80041F91A /* Content View */,
 				DCD7127A24CA6E3600A3979F /* NewUser.swift */,
 				DCD7127C24CA8C3B00A3979F /* ImagePicker.swift */,
 				DCD7126924BFE71A00A3979F /* General Structs and Funcs */,
-				DCD7126424BFE25F00A3979F /* Groups Home View */,
+				DCD7126424BFE25F00A3979F /* Home View */,
 				DCD7125B24BFA97D00A3979F /* Group Tab View */,
 				DC279F5924B55E6500B0A7A9 /* Event Tab Views */,
 				DC279F5A24B55EA700B0A7A9 /* List Tab View */,
@@ -206,6 +212,16 @@
 			path = ListViews;
 			sourceTree = "<group>";
 		};
+		DCA0D549250857F80041F91A /* Content View */ = {
+			isa = PBXGroup;
+			children = (
+				DC279F33249D7D6400B0A7A9 /* ContentView.swift */,
+				DCA0D54A250858160041F91A /* GroupsView.swift */,
+				DCA0D54C2508582D0041F91A /* TabsView.swift */,
+			);
+			path = "Content View";
+			sourceTree = "<group>";
+		};
 		DCD7125B24BFA97D00A3979F /* Group Tab View */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,13 +233,13 @@
 			path = "Group Tab View";
 			sourceTree = "<group>";
 		};
-		DCD7126424BFE25F00A3979F /* Groups Home View */ = {
+		DCD7126424BFE25F00A3979F /* Home View */ = {
 			isa = PBXGroup;
 			children = (
 				DCD7126224BFE07000A3979F /* GroupsBackButton.swift */,
 				DCD7126724BFE66D00A3979F /* NewGroupView.swift */,
 			);
-			path = "Groups Home View";
+			path = "Home View";
 			sourceTree = "<group>";
 		};
 		DCD7126924BFE71A00A3979F /* General Structs and Funcs */ = {
@@ -237,6 +253,7 @@
 				DCD7127024C16B1500A3979F /* EditButtonActionViews.swift */,
 				DCD7127624C627A900A3979F /* CopyButtonsView.swift */,
 				DCD7127824CA538500A3979F /* InfoButtonView.swift */,
+				DCA0D5472508576E0041F91A /* ViewRouter.swift */,
 			);
 			path = "General Structs and Funcs";
 			sourceTree = "<group>";
@@ -323,8 +340,10 @@
 				DCD7127D24CA8C3B00A3979F /* ImagePicker.swift in Sources */,
 				DC279F32249D7D6400B0A7A9 /* Eventend.xcdatamodeld in Sources */,
 				DCD7125A24BFA62700A3979F /* HomeTabView.swift in Sources */,
+				DCA0D5482508576E0041F91A /* ViewRouter.swift in Sources */,
 				DCD7126B24BFE79600A3979F /* Group.swift in Sources */,
 				DC279F6424B596AB00B0A7A9 /* ThisEventPerson.swift in Sources */,
+				DCA0D54D2508582D0041F91A /* TabsView.swift in Sources */,
 				DCD7125D24BFA99500A3979F /* GroupStatsView.swift in Sources */,
 				DCD7127B24CA6E3600A3979F /* NewUser.swift in Sources */,
 				DC279F5624A0312B00B0A7A9 /* ThisListView.swift in Sources */,
@@ -338,6 +357,7 @@
 				DC279F5C24B5637700B0A7A9 /* PastEventsView.swift in Sources */,
 				DC279F6824B8538900B0A7A9 /* ThisEventView.swift in Sources */,
 				DCD7125624BEE4B700A3979F /* NewListView.swift in Sources */,
+				DCA0D54B250858160041F91A /* GroupsView.swift in Sources */,
 				DCD7125424BEE3FB00A3979F /* pubFunctions.swift in Sources */,
 				DCD7127324C24A9800A3979F /* ThisEventStatsView.swift in Sources */,
 				DCD7126824BFE66D00A3979F /* NewGroupView.swift in Sources */,

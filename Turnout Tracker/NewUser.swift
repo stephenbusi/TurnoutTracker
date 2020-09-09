@@ -1,24 +1,27 @@
 //
-//  NewUser.swift
-//  Turnout Tracker
+//  Depicts the different tabs shown for the tutorial.
 //
 //  Created by Stephen Boussarov on 7/23/20.
-//  Copyright © 2020 Stephen Boussarov. All rights reserved.
 //
 
 import SwiftUI
 
-
+/*
+ First Tab Shown
+ */
 struct NewUser: View {
+    // determines if tutorial should still be shown
     @Binding var showTut: Bool
+    // states if tutorial is being shown for first time
     @Binding var firstTut: Bool
-    
+    // which tab to be shown
     @State var nextPage = "page1"
+    
     var body: some View {
         ZStack {
             Color.white
             
-            
+            // Text Shown
             VStack {
                 Text("Welcome to\nTurnout Tracker!")
                     .font(.custom("Futura Bold", size: 30))
@@ -68,6 +71,7 @@ struct NewUser: View {
                 
             }
             
+            // Logo shown
             VStack {
                 Image("TurnoutTracker_Icon_secondary_color")
                     .resizable()
@@ -76,7 +80,8 @@ struct NewUser: View {
                 Spacer()
             }
 
-
+            // Determines which tab to show
+            
             if nextPage == "page2" {
                 NewUser2(nextPage: self.$nextPage)
             }
@@ -105,17 +110,23 @@ struct NewUser: View {
                 NewUser8(showTut: self.$showTut, nextPage: self.$nextPage, firstTut: self.$firstTut)
             }
 
-        }.frame(width: 350, height:630)
-        .cornerRadius(20).shadow(radius: 20)
+        }
+            .frame(width: 350, height:630)
+            .cornerRadius(20).shadow(radius: 20)
     }
 }
 
+/*
+ Second Tab Shown
+*/
 struct NewUser2: View {
+    // which tab to be shown
     @Binding var nextPage: String
     var body: some View {
         ZStack {
             Color.white
             
+            // Text shown
             VStack {
                 Text("Groups Page")
                     .font(.custom("Futura Bold", size: 30))
@@ -144,6 +155,8 @@ struct NewUser2: View {
                         .opacity(0.3)
                     
                     Spacer()
+                    
+                    // Buttons to switch tabs
                     
                     Button(action: {
                         self.nextPage = "page1"
@@ -182,12 +195,17 @@ struct NewUser2: View {
     }
 }
 
+/*
+ Third Tab Shown
+*/
 struct NewUser3: View {
+    // which tab to be shown
     @Binding var nextPage: String
     var body: some View {
         ZStack {
             Color.white
             
+            // Text shown
             VStack {
                 Text("Lists Page")
                     .font(.custom("Futura Bold", size: 30))
@@ -216,6 +234,8 @@ struct NewUser3: View {
                         .opacity(0.3)
                     
                     Spacer()
+                    
+                    // Buttons to switch tabs
                     
                     Button(action: {
                         self.nextPage = "page2"
@@ -254,13 +274,18 @@ struct NewUser3: View {
     }
 }
 
+/*
+ Fourth Tab Shown
+*/
 struct NewUser4: View {
+    // which tab to be shown
     @Binding var nextPage: String
 
     var body: some View {
         ZStack {
             Color.white
             
+            // Text shown
             VStack {
                 Text("Individual List")
                     .font(.custom("Futura Bold", size: 30))
@@ -289,6 +314,8 @@ struct NewUser4: View {
                         .opacity(0.3)
                     
                     Spacer()
+                    
+                    // Buttons to switch tabs
                     
                     Button(action: {
                         self.nextPage = "page3"
@@ -328,13 +355,18 @@ struct NewUser4: View {
     }
 }
 
+/*
+ Fifth Tab Shown
+ */
 struct NewUser5: View {
+    // which tab to be shown
     @Binding var nextPage: String
     
     var body: some View {
         ZStack {
             Color.white
             
+            // Text shown
             VStack {
                 Text("Events Page")
                     .font(.custom("Futura Bold", size: 30))
@@ -363,6 +395,8 @@ struct NewUser5: View {
                         .opacity(0.3)
                     
                     Spacer()
+                    
+                    // Buttons to switch tabs
                     
                     Button(action: {
                         self.nextPage = "page4"
@@ -402,163 +436,184 @@ struct NewUser5: View {
     }
 }
 
+/*
+ Sixth Tab Shown
+ */
 struct NewUser6: View {
+    // which tab to be shown
     @Binding var nextPage: String
     
     var body: some View {
         ZStack {
             Color.white
                 
-                VStack {
-                    Text("Individual Event")
-                        .font(.custom("Futura Bold", size: 30))
-                        .padding(.top)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(ColorManager.secondary)
-                    
-                    Rectangle()
-                        .foregroundColor(Color.white)
-                        .frame(width: 225, height: 400)
+            // Text shown
+            VStack {
+                Text("Individual Event")
+                    .font(.custom("Futura Bold", size: 30))
+                    .padding(.top)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(ColorManager.secondary)
+                
+                Rectangle()
+                    .foregroundColor(Color.white)
+                    .frame(width: 225, height: 400)
 
-                    
-                    Text("Simply check off people who show up to your event to mark them as 'attended'. Any changes you make to an event are automatically saved and can be edited at any time.")
-                        .font(thisFont( size: 15))
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(Color.black)
-                        .opacity(0.6)
-                        .frame(width: 325)
-                        .padding(.top)
+                
+                Text("Simply check off people who show up to your event to mark them as 'attended'. Any changes you make to an event are automatically saved and can be edited at any time.")
+                    .font(thisFont( size: 15))
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(Color.black)
+                    .opacity(0.6)
+                    .frame(width: 325)
+                    .padding(.top)
+                
+                Spacer()
+                
+                HStack {
+                    Text("6/8")
+                        .padding(.leading,15)
+                        .opacity(0.3)
                     
                     Spacer()
                     
-                    HStack {
-                        Text("6/8")
-                            .padding(.leading,15)
-                            .opacity(0.3)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            self.nextPage = "page5"
-                        }) {
-                            Image(systemName: "arrow.left.circle.fill")
-                                .imageScale(.large)
-                                .foregroundColor(ColorManager.primary)
-                        }
-                        .padding(.trailing, 15)
-                        
-                        Button(action: {
-                            self.nextPage = "page7"
-                        }) {
-                            Image(systemName: "arrow.right.circle.fill")
-                                .imageScale(.large)
-                                .foregroundColor(ColorManager.primary)
-                        }
-                            .padding(.trailing,15)
+                    // Buttons to switch tabs
+                    
+                    Button(action: {
+                        self.nextPage = "page5"
+                    }) {
+                        Image(systemName: "arrow.left.circle.fill")
+                            .imageScale(.large)
+                            .foregroundColor(ColorManager.primary)
                     }
-                    .padding(.bottom, 15)
+                    .padding(.trailing, 15)
                     
+                    Button(action: {
+                        self.nextPage = "page7"
+                    }) {
+                        Image(systemName: "arrow.right.circle.fill")
+                            .imageScale(.large)
+                            .foregroundColor(ColorManager.primary)
+                    }
+                        .padding(.trailing,15)
                 }
+                .padding(.bottom, 15)
                 
-                // Screen Shot
-                VStack {
-                    Image("Event 1")
-                        .resizable()
-                        .frame(width: 200, height: 420)
-                        .border(ColorManager.secondary)
-                        .padding(.top, 65)
-                        
-                    Spacer()
-                }
+            }
+            
+            // Screen Shot
+            VStack {
+                Image("Event 1")
+                    .resizable()
+                    .frame(width: 200, height: 420)
+                    .border(ColorManager.secondary)
+                    .padding(.top, 65)
+                    
+                Spacer()
+            }
                 
-            }.frame(width: 350, height:630)
-            .cornerRadius(20).shadow(radius: 20)
+        }.frame(width: 350, height:630)
+        .cornerRadius(20).shadow(radius: 20)
     }
 }
 
+/*
+ Seventh Tab Shown
+ */
 struct NewUser7: View {
+    // which tab to be shown
     @Binding var nextPage: String
     
     var body: some View {
         ZStack {
             Color.white
                 
-                VStack {
-                    Text("Home Page")
-                        .font(.custom("Futura Bold", size: 30))
-                        .padding(.top)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(ColorManager.secondary)
-                    
-                    Rectangle()
-                        .foregroundColor(Color.white)
-                        .frame(width: 225, height: 400)
+            // Text shown
+            VStack {
+                Text("Home Page")
+                    .font(.custom("Futura Bold", size: 30))
+                    .padding(.top)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(ColorManager.secondary)
+                
+                Rectangle()
+                    .foregroundColor(Color.white)
+                    .frame(width: 225, height: 400)
 
-                    
-                    Text("Here, you can view a group's general statistics. You can also tap on a name to view an attendee's statistics.")
-                        .font(thisFont( size: 15))
-                        .multilineTextAlignment(.leading)
-                        .foregroundColor(Color.black)
-                        .opacity(0.6)
-                        .frame(width: 325)
-                        .padding(.top)
+                
+                Text("Here, you can view a group's general statistics. You can also tap on a name to view an attendee's statistics.")
+                    .font(thisFont( size: 15))
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(Color.black)
+                    .opacity(0.6)
+                    .frame(width: 325)
+                    .padding(.top)
+                
+                Spacer()
+                
+                HStack {
+                    Text("7/8")
+                        .padding(.leading,15)
+                        .opacity(0.3)
                     
                     Spacer()
                     
-                    HStack {
-                        Text("7/8")
-                            .padding(.leading,15)
-                            .opacity(0.3)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            self.nextPage = "page6"
-                        }) {
-                            Image(systemName: "arrow.left.circle.fill")
-                                .imageScale(.large)
-                                .foregroundColor(ColorManager.primary)
-                        }
-                        .padding(.trailing, 15)
-                        
-                        Button(action: {
-                            self.nextPage = "page8"
-                        }) {
-                            Image(systemName: "arrow.right.circle.fill")
-                                .imageScale(.large)
-                                .foregroundColor(ColorManager.primary)
-                        }
-                            .padding(.trailing,15)
+                    // Buttons to switch tabs
+                    
+                    Button(action: {
+                        self.nextPage = "page6"
+                    }) {
+                        Image(systemName: "arrow.left.circle.fill")
+                            .imageScale(.large)
+                            .foregroundColor(ColorManager.primary)
                     }
-                    .padding(.bottom, 15)
+                    .padding(.trailing, 15)
                     
+                    Button(action: {
+                        self.nextPage = "page8"
+                    }) {
+                        Image(systemName: "arrow.right.circle.fill")
+                            .imageScale(.large)
+                            .foregroundColor(ColorManager.primary)
+                    }
+                        .padding(.trailing,15)
                 }
+                .padding(.bottom, 15)
                 
-                // Screen Shot
-                VStack {
-                    Image("Home 1")
-                        .resizable()
-                        .frame(width: 200, height: 420)
-                        .border(ColorManager.secondary)
-                        .padding(.top, 65)
-                        
-                    Spacer()
-                }
-                
-            }.frame(width: 350, height:630)
-            .cornerRadius(20).shadow(radius: 20)
+            }
+            
+            // Screen Shot
+            VStack {
+                Image("Home 1")
+                    .resizable()
+                    .frame(width: 200, height: 420)
+                    .border(ColorManager.secondary)
+                    .padding(.top, 65)
+                    
+                Spacer()
+            }
+            
+        }.frame(width: 350, height:630)
+        .cornerRadius(20).shadow(radius: 20)
     }
 }
 
+/*
+ Eight Tab Shown
+ */
 struct NewUser8: View {
+    // determines if tutorial should still be shown
     @Binding var showTut: Bool
+    // which tab to be shown
     @Binding var nextPage: String
+    // states if tutorial is being shown for first time
     @Binding var firstTut: Bool
     
     var body: some View {
         ZStack {
             Color.white
             
+            // Text shown
             VStack {
                 
                 Text("Additional Info")
@@ -639,12 +694,6 @@ struct NewUser8: View {
                 }
                 .frame(width: 300, height: 380).foregroundColor(Color.gray).font(.system(size: 15))
                 
-                
-                
-            
-                
-                
-                
                 Text("Enjoy Turnout Tracker!")
                     .font(thisFont(size: 30)).fontWeight(.bold).padding(.top, 30).multilineTextAlignment(.center).foregroundColor(ColorManager.secondary)
                 
@@ -658,6 +707,8 @@ struct NewUser8: View {
                         .opacity(0.3)
                     
                     Spacer()
+                    
+                    // Buttons to end tutorial or switch tabs
                     
                     Button(action: {
                        self.nextPage = "page7"

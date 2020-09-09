@@ -1,9 +1,7 @@
 //
-//  SceneDelegate.swift
-//  Eventend
+//  Functions involved with contents displayed on screen of app.
 //
 //  Created by Stephen Boussarov on 6/19/20.
-//  Copyright © 2020 Stephen Boussarov. All rights reserved.
 //
 
 import UIKit

@@ -1,9 +1,7 @@
 //
-//  AppDelegate.swift
-//  Eventend
+//  Generic outline for AppDelegate. Details how app is opened.
 //
 //  Created by Stephen Boussarov on 6/19/20.
-//  Copyright © 2020 Stephen Boussarov. All rights reserved.
 //
 
 import UIKit
