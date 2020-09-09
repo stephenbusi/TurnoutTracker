@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Group" representedClassName=".Group" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Person" representedClassName=".Person" syncable="YES">
+        <attribute name="groupName" optional="YES" attributeType="String"/>
+        <attribute name="listID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="listName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ThisEvent" representedClassName=".ThisEvent" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="eventID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="groupName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="thisList" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ThisEventPerson" representedClassName=".ThisEventPerson" syncable="YES">
+        <attribute name="checked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="eventDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="eventID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="eventList" optional="YES" attributeType="String"/>
+        <attribute name="eventName" optional="YES" attributeType="String"/>
+        <attribute name="groupName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ThisList" representedClassName=".ThisList" syncable="YES">
+        <attribute name="groupName" optional="YES" attributeType="String"/>
+        <attribute name="listID" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="ThisEvent" positionX="-18" positionY="45" width="128" height="118"/>
+        <element name="ThisEventPerson" positionX="9" positionY="81" width="128" height="163"/>
+        <element name="ThisList" positionX="-54" positionY="9" width="128" height="88"/>
+        <element name="Group" positionX="-27" positionY="63" width="128" height="28"/>
+    </elements>
+</model>
